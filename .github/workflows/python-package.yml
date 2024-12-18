@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CODECOV_URL: http://codedev.tdengine.net:5080
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      CODECOV_TOKEN: a666720c-cef4-4786-859b-1f004cf91999
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -25,7 +25,7 @@ jobs:
       uses: codecov/codecov-action@v5
       with:
         codecov_url: http://codedev.tdengine.net:5080
-        token: ${{ secrets.CODECOV_TOKEN }}
+        token: a666720c-cef4-4786-859b-1f004cf91999 
         slug: jiajingbin/codecov-example
         file: ./coverage.xml  # 指定覆盖率文件的路径
         fail_ci_if_error: true  # 可选的，如果上传失败则使CI失败
