@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CODECOV_URL: http://codedev.tdengine.net:5080
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
