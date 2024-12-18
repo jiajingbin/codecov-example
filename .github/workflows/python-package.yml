@@ -21,3 +21,11 @@ jobs:
       run: |
         coverage run -m unittest discover
         coverage report
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml  # 指定覆盖率文件的路径
+        flags: unittests  # 可选的，用于标记上传内容
+        name: codecov-umbrella  # 可选的，自定义报告名称
+        fail_ci_if_error: true  # 可选的，如果上传失败则使CI失败
